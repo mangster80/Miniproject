@@ -1,5 +1,5 @@
-$(document).ready(function(){
-  $("#myBtn").click(function(){
+$(document).ready(function() {
+  $("#myBtn").click(function() {
     $("#myModal").modal();
   });
 });
@@ -31,5 +31,5 @@ $(document).ready(function(){
 //   });
 // });
 //
-// // Data Picker Initialization
+//  Data Picker Initialization
 // $('.datepicker').pickadate();
