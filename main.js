@@ -1,35 +1,22 @@
-$(document).ready(function() {
-  $("#myBtn").click(function() {
-    $("#myModal").modal();
-  });
-});
+console.dir(document);
 
-// let student = {
-//   firstname: “Lisa”,
-//   lastname: “LaFlamme”,
-//   age: 21,
-//   classes: [“street”, “dancehall”, “balett”]
-// };
-//
-// let teacher = {
-//   firstname: “Adrienne”,
-//   lastname: “Picard”,
-//   age: 28,
-//   classes: [“street”, “dancehall”, “balett”]
-// };
-//
-// let classes = [{
-//   name: “street”,
-//   dates: [“2018-03-16”, “2018-03-23”, “2018-03-30”],
-//   start: “18.00”,
-//   length: 2,
-// },
+// console.log(document.getElementById('header-title'));
 
-// $(function () {
-//   $('#datetimepicker2').datetimepicker(){
-//   locale: 'eu'
-//   });
-// });
-//
-//  Data Picker Initialization
-// $('.datepicker').pickadate();
+var student = {
+  firstName: ["Magnus", "Alex"],
+  lastName: "Wallin",
+  age: 38,
+  classes: ["street", "dancehall", "ballet"]
+};
+console.log(student);
+console.log(student.classes[1]);
+
+var headerTitle = document.getElementById('header-title');
+console.log(headerTitle);
+headerTitle.innerText = "Welcome" +" "+ student.firstName[1]
+
+var button = document.getElementById('button').addEventListener('click', buttonClick);
+
+function buttonClick(){
+  console.log('Button clicked');
+}
