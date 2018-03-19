@@ -26,16 +26,16 @@
               <h4><span class="glyphicon glyphicon-lock"></span>Login</h4>
             </div>
             <div class="modal-body" style="padding:40px 50px;">
-              <form role="form">
+              <form role="form" action="student.html" onsubmit="return login()" method="post" name="form-control">
                 <div class="form-group">
-                  <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
-                  <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+                  <label for="username"><span class="glyphicon glyphicon-user"></span> Username</label>
+                  <input type="text" class="form-control" id="username" placeholder="Enter email">
                 </div>
                 <div class="form-group">
                   <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
                   <input type="password" class="form-control" id="psw" placeholder="Enter password">
                 </div>
-                <button type="submit" class="btn btn-info btn-lg" onclick="pasuser(this.form)"> LOGIN</button>
+                <button type="submit" class="btn btn-info btn-lg"> LOGIN</button>
               </form>
             </div>
           </div>
@@ -79,6 +79,7 @@
   </footer>
 
   <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="login.js"></script>
   <script>
     $(document).ready(function() {
       $("#myBtn").click(function() {
