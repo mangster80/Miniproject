@@ -24,7 +24,7 @@
       <h2 id="header-title">Welcome Student</h2>
       <a type="btn" class="btn btn-danger btn-lg" href="index.html">Log Out</a>
     </div>
-  </nav>
+  </nav> <br>
   <main role="main" class="container">
     <h1>Pick Your Poison</h1>
     <div class="card-group">
@@ -50,8 +50,8 @@
           <h5 class="card-title">Breakdance</h5>
           <p class="card-text">Break a leg!... Or don't!</p>
           <div class="form-group">
-            <div class='input-group date' id='datepicker2'>
-              <input type='text' class="form-control" />
+            <div class='input-group date'>
+              <input type='text' class="form-control" id='datepicker2' />
               <span class="input-group-addon">
                 <span class="glyphicon glyphicon-calendar"></span>
               </span>
@@ -66,8 +66,8 @@
           <h5 class="card-title">Classic</h5>
           <p class="card-text">Learn the fancy ballet way!</p>
           <div class="form-group">
-            <div class='input-group date' id='datepicker3'>
-              <input type='text' class="form-control" />
+            <div class='input-group date'>
+              <input type='text' class="form-control" id='datepicker3'/>
               <span class="input-group-addon">
                 <span class="glyphicon glyphicon-calendar"></span>
               </span>
@@ -106,6 +106,8 @@
   <script>
     $(function() {
       $("#datepicker").datepicker();
+      $("#datepicker2").datepicker();
+      $("#datepicker3").datepicker();
     } );
   </script>
 
