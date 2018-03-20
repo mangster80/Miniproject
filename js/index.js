@@ -112,12 +112,24 @@ const student = [{
 
 
 
-const teacher = {
-  firstname: ["Adrienne", "Rocky", "Sally"],
-  lastname: ["Picard", "Balboa", "Sjöström"],
-  age: [21, 27, 1],
-  classes: ["street", "dancehall", "balett"]
-};
+const teacher = [{
+  firstname: "Adrienne",
+  lastname: "Picard",
+  age: 21,
+  classes: "street",
+},
+  {
+  "firstname":"Rocky",
+  "lastname":"Balboa",
+  "age": 39,
+  "classes":["street", "dancehall", "balett"]
+},
+  {
+  "firstname":"Sally",
+  "lastname":"Sjöström",
+  "age": 1,
+  "classes":["street", "dancehall", "balett"]
+}];
 
 // todo add classes
 const capitalize = function(string) {
