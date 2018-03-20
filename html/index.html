@@ -22,21 +22,21 @@
       <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
           <div class="modal-content">
-            <div class="modal-header" style="padding:35px 50px;">
+            <div class="modal-header p-5">
               <h4><span class="glyphicon glyphicon-lock"></span>Login</h4>
             </div>
-            <div class="modal-body" style="padding:40px 50px;">
-              <form role="form" action="student.html" onsubmit="return login()" method="post" name="form-control">
+            <div class="modal-body p-5">
+              <form role="form" method="post" name="form-control">
                 <div class="form-group">
                   <label for="username"><span class="glyphicon glyphicon-user"></span> Username</label>
-                  <input type="text" class="form-control" id="username" placeholder="Enter email">
+                  <input type="text" class="form-control mb-4" id="username" placeholder="Enter email">
                 </div>
                 <div class="form-group">
                   <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
-                  <input type="password" class="form-control" id="psw" placeholder="Enter password">
+                  <input type="password" class="form-control mb-4" id="psw" placeholder="Enter password">
                 </div>
-                <button type="submit" class="btn btn-info btn-lg"> LOGIN</button>
               </form>
+              <button onclick="login()" class="btn btn-info btn-lg"> LOGIN</button>
             </div>
           </div>
         </div>
@@ -78,7 +78,7 @@
     <p>Copyright 2018 <a href="https://mangster80.github.io/Portfolio/">Magnus Wallin</a></p>
   </footer>
 
-  <script type="text/javascript" src="../js/main.js"></script>
+  <!-- <script type="text/javascript" src="../js/main.js"></script> -->
   <script type="text/javascript" src="../js/login.js"></script>
   <script>
     $(document).ready(function() {
