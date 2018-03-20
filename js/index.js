@@ -7,7 +7,9 @@ const port = 8080;
 const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
@@ -17,17 +19,103 @@ app.use(function(req, res, next) {
 
 app.listen(port);
 
-const student = {
-  firstname: "Lisa",
-  lastname: "LaFlamme",
-  age: 21,
-  classes: ["street", "dancehall", "balett"]
-};
+const student = [{
+      "firstname":"Lisa",
+      "lastname":"LaFlamme",
+      "age":"21",
+      "classes":["street", "dancehall", "balett"]
+    },
+    {
+      "firstname": "Alex",
+      "lastname": "Pitt",
+      "age": "32",
+      "classes": ["street", "balett"]
+    },
+    {
+      "firstname": "Mange",
+      "lastname": "Kardashian",
+      "age": "35",
+      "classes": ["street"]
+    },
+    {
+      "firstname": "Jonny",
+      "lastname": "Wallin",
+      "age": "19",
+      "classes": ["street", "dancehall", "balett"]
+    },
+    {
+      "firstname": "Filip",
+      "lastname": "Bentzer",
+      "age": "17",
+      "classes": ["street", "dancehall", "balett"]
+    },
+    {
+      "firstname": "Ronja",
+      "lastname": "Rövardotter",
+      "age": "45",
+      "classes": ["street", "balett"]
+    },
+    {
+      "firstname": "Kristian",
+      "lastname": "Rigaud",
+      "age": "39",
+      "classes": ["balett"]
+    },
+    {
+      "firstname": "Julia",
+      "lastname": "Bessouda",
+      "age": "31",
+      "classes": ["balett", "street"]
+    },
+    {
+      "firstname": "Maryam",
+      "lastname": "Kitten",
+      "age": "25",
+      "classes": ["balett", "street"]
+    },
+    {
+      "firstname": "Camilla",
+      "lastname": "Gustavsson",
+      "age": "22",
+      "classes": ["balett", "street"]
+    },
+    {
+      "firstname": "Cecilia",
+      "lastname": "Sigurdardottir",
+      "age": "21",
+      "classes": ["balett", "street", "dancehall"]
+    },
+    {
+      "firstname": "Frida",
+      "lastname": "Svahnen",
+      "age": "27",
+      "classes": ["balett", "street", "dancehall"]
+    },
+    {
+      "firstname": "Mattias",
+      "lastname": "Chiquita",
+      "age": "27",
+      "classes": ["balett", "dancehall"]
+    },
+    {
+      "firstname": "Leo",
+      "lastname": "Milojevic",
+      "age": "30",
+      "classes": ["balett", "dancehall"]
+    },
+    {
+      "firstname": "Grímúlfur",
+      "lastname": "Grímsson",
+      "age": "59",
+      "classes": ["balett", "dancehall"]
+  }];
+
+
 
 const teacher = {
-  firstname: "Adrienne",
-  lastname: "Picard",
-  age: 21,
+  firstname: ["Adrienne", "Rocky", "Sally"],
+  lastname: ["Picard", "Balboa", "Sjöström"],
+  age: [21, 27, 1],
   classes: ["street", "dancehall", "balett"]
 };
 
