@@ -70,7 +70,7 @@ const student = [{
     {
       firstname: "Maryam",
       lastname: "Kitten",
-      age: "25",
+      age: 25,
       classes: ["balett", "street"]
     },
     {
