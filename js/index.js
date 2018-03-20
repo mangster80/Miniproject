@@ -22,49 +22,49 @@ app.listen(port);
 const student = [{
       "firstname":"Lisa",
       "lastname":"LaFlamme",
-      "age":"21",
+      "age":21,
       "classes":["street", "dancehall", "balett"]
     },
     {
       "firstname": "Alex",
       "lastname": "Pitt",
-      "age": "32",
+      "age": 32,
       "classes": ["street", "balett"]
     },
     {
       "firstname": "Mange",
       "lastname": "Kardashian",
-      "age": "35",
+      "age": 35,
       "classes": ["street"]
     },
     {
       "firstname": "Jonny",
       "lastname": "Wallin",
-      "age": "19",
+      "age": 19,
       "classes": ["street", "dancehall", "balett"]
     },
     {
       "firstname": "Filip",
       "lastname": "Bentzer",
-      "age": "17",
+      "age": 17,
       "classes": ["street", "dancehall", "balett"]
     },
     {
       "firstname": "Ronja",
       "lastname": "Rövardotter",
-      "age": "45",
+      "age": 45,
       "classes": ["street", "balett"]
     },
     {
       "firstname": "Kristian",
       "lastname": "Rigaud",
-      "age": "39",
+      "age": 39,
       "classes": ["balett"]
     },
     {
       "firstname": "Julia",
       "lastname": "Bessouda",
-      "age": "31",
+      "age": 31,
       "classes": ["balett", "street"]
     },
     {
@@ -76,37 +76,37 @@ const student = [{
     {
       "firstname": "Camilla",
       "lastname": "Gustavsson",
-      "age": "22",
+      "age": 22,
       "classes": ["balett", "street"]
     },
     {
       "firstname": "Cecilia",
       "lastname": "Sigurdardottir",
-      "age": "21",
+      "age": 21,
       "classes": ["balett", "street", "dancehall"]
     },
     {
       "firstname": "Frida",
       "lastname": "Svahnen",
-      "age": "27",
+      "age": 27,
       "classes": ["balett", "street", "dancehall"]
     },
     {
       "firstname": "Mattias",
       "lastname": "Chiquita",
-      "age": "27",
+      "age": 27,
       "classes": ["balett", "dancehall"]
     },
     {
       "firstname": "Leo",
       "lastname": "Milojevic",
-      "age": "30",
+      "age": 30,
       "classes": ["balett", "dancehall"]
     },
     {
       "firstname": "Grímúlfur",
       "lastname": "Grímsson",
-      "age": "59",
+      "age": 59,
       "classes": ["balett", "dancehall"]
   }];
 
@@ -129,6 +129,16 @@ const teacher = [{
   "lastname":"Sjöström",
   "age": 1,
   "classes":["street", "dancehall", "balett"]
+}];
+
+const classes = [{
+  "name": "Street"
+},
+{
+  "name": "dancehall"
+},
+{
+  "name": "balett"
 }];
 
 // todo add classes
