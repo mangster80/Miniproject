@@ -2,16 +2,16 @@ let login = function () {
   let username = document.forms["form-control"]["username"].value;
   let password = document.forms["form-control"]["password"].value;
   if (username == "Mange" && password == "123") {
-    window.location.replace = student.html;
+    window.location = student.html;
     return false;
 
   }
   else if (username == "Alex" && password == "123") {
-    window.location.replace = student.html;
+    window.location = ../html/student.html;
     return false;
   }
   else if (username == "teacher" && password == "123"){
-    window.location.replace = teacher.html;;
+    window.location = ../hmtl/teacher.html;;
     return false;
   }
 }
