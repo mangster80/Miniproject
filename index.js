@@ -23,8 +23,11 @@ const student = {
   age: [21, 32, 35, 19, 17, 45, 39, 31, 25, 22, 21, 27, 29, 30, 59],
   classes: ["street", "dancehall", "balett"]
   [{
-    "firstname" : "Lisa",
-    "lastname" : "LaFlamme"
+    {"firstname" : "Lisa",
+    "lastname" : "LaFlamme",
+    "age" : "21",
+    "classes" : "[street", "dancehall", "balett]"
+  },
   }]
 };
 
