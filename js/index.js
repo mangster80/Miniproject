@@ -3,6 +3,7 @@
 
 const express = require('express');
 const app = express();
+const mysql = require('mysql')
 const port = 8080;
 const bodyParser = require('body-parser');
 
@@ -18,6 +19,38 @@ app.use(function(req, res, next) {
 });
 
 app.listen(port);
+
+const db = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  database: 'danceSchool'
+})
+
+// Connect
+db.connect((err) => {
+  if (err) {
+    throw err
+  }
+  console.log('MySql Connected')
+})
+// Create DB
+app.get('/createdb', (req, res) => {
+  let sql = 'CREATE DATABASE danceSchool'
+  db.query(sql, (err, result) => {
+    if (err) throw err
+    console.log(result)
+    res.send('Database created')
+  })
+})
+
+app.get('/createnewtable/', (req, res) => {
+  let sql = 'CREATE TABLE classes(id int AUTO_INCREMENT, name VARCHAR(255), score INT(255), PRIMARY KEY (id))'
+  db.query(sql, (err, result) => {
+    if (err) throw err
+    console.log('result')
+    res.send('Teams table created')
+  })
+})
 
 const student = [{
       firstname:"Lisa",
@@ -110,8 +143,6 @@ const student = [{
       classes: ["balett", "dancehall"]
   }];
 
-
-
 const teacher = [{
   firstname: "Adrienne",
   lastname: "Picard",
@@ -170,5 +201,4 @@ app.get('/classes', function(req, res) {
 });
 
 // todo add classes endpoint
-
 console.log(`App listening on port ${port}`);
