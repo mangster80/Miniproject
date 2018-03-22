@@ -18,6 +18,7 @@ function readStudents() {
         console.log(stud.firstname)
       })
       document.getElementById('output').innerHTML = output
+      document.getElementById('output1').innerHTML = output
     })
 
   fetch(url + '/teacher')

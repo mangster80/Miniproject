@@ -43,14 +43,76 @@ app.get('/createdb', (req, res) => {
   })
 })
 
-app.get('/createnewtable/', (req, res) => {
-  let sql = 'CREATE TABLE classes(id int AUTO_INCREMENT, name VARCHAR(255), score INT(255), PRIMARY KEY (id))'
+app.get('/createclassestable/', (req, res) => {
+  let sql = 'CREATE TABLE classes(id int AUTO_INCREMENT, name VARCHAR(255), dates INT(255), start INT(255), length INT(255), PRIMARY KEY (id))'
   db.query(sql, (err, result) => {
     if (err) throw err
     console.log('result')
-    res.send('Teams table created')
+    res.send('Classes table created')
   })
 })
+app.get('/createteachertable/', (req, res) => {
+  let sql = 'CREATE TABLE teacher(id int AUTO_INCREMENT, firstname VARCHAR(255), lastname VARCHAR(255), age INT(255), classes VARCHAR(255), PRIMARY KEY (id))'
+  db.query(sql, (err, result) => {
+    if (err) throw err
+    console.log('result')
+    res.send('Teacher table created')
+  })
+})
+app.get('/createstudenttable/', (req, res) => {
+  let sql = 'CREATE TABLE student(id int AUTO_INCREMENT, firstname VARCHAR(255), lastname VARCHAR(255), age INT(255), classes VARCHAR(255), PRIMARY KEY (id))'
+  db.query(sql, (err, result) => {
+    if (err) throw err
+    console.log('result')
+    res.send('Student table created')
+  })
+})
+app.get('/addclass/:name/:dates/:start/:length', (req, res) => {
+  let className = `${req.params.name}`
+  let classDates = `${req.params.dates}`
+  let classStart = `${req.params.start}`
+  let classLength = `${req.params.length}`
+  let workshop = {name: className, dates: classDates, start: classStart, length: classLength}
+  let sql = 'INSERT INTO classes SET ?'
+  let query = db.query(sql, workshop, (err, result) => {
+    if (err) throw err
+    console.log('result')
+    res.send('RESULT')
+  })
+})
+app.get('/addteacher/:firstname/:lastname/:age/:classes', (req, res) => {
+  let firstName = `${req.params.firstname}`
+  let lastName = `${req.params.lastname}`
+  let age = `${req.params.age}`
+  let classNames = `${req.params.classes}`
+  let teacher = {firstname: firstName, lastname: lastName, age: age, classes: classNames}
+  let sql = 'INSERT INTO teacher SET ?'
+  let query = db.query(sql, teacher, (err, result) => {
+    if (err) throw err
+    console.log('result')
+    res.send('RESULT')
+  })
+})
+app.get('/addstudent/:firstname/:lastname/:age/:classes:classes:classes', (req, res) => {
+  let firstName = `${req.params.firstname}`
+  let lastName = `${req.params.lastname}`
+  let age = `${req.params.age}`
+  let classNames = `${req.params.classes}`
+  let student = {firstname: firstname, lastname: lastName, age: age, classes: classNames}
+  let sql = 'INSERT INTO student SET ?'
+  let query = db.query(sql, teacher, (err, result) => {
+    if (err) throw err
+    console.log('result')
+    res.send('RESULT')
+  })
+})
+// INSERT INTO Person (id, name, dates, start, length)
+//  SELECT id, name, dates, start, length
+//  FROM OPENJSON(@json)
+//  WITH (id int,
+//        name nvarchar(50), dates datetime2,
+//        start int, length int)
+
 
 const student = [{
       firstname:"Lisa",
