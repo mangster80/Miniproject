@@ -2,7 +2,8 @@ console.dir(document);
 
 // console.log(document.getElementById('header-title'));
 
-let student = {
+let url = "http://localhost:8080";
+/*let student = {
   firstName: ["Magnus", "Alex"],
   lastName: "Wallin",
   age: 38,
@@ -14,7 +15,7 @@ console.log(student.classes[1]);
 let headerTitle = document.getElementById('header-title');
 console.log(headerTitle);
 headerTitle.innerText = "Welcome" +" "+ student.firstName[1]
-
+*/
 // Functions for selecting workshops for Students
 // Beach Dance Workshop
 let button1 = document.getElementById('button1').addEventListener('click', buttonClick);
