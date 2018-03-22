@@ -54,8 +54,8 @@ app.get('/createnewtable/', (req, res) => {
 
 const student = [
   {
-    "firstname":"Lisa",
-    "lastname":"LaFlamme",
+    "firstname":"lisa",
+    "lastname":"laFlamme",
     "age":21,
     "classes":["street", "dancehall", "balett"]
   },

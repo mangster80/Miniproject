@@ -2,6 +2,10 @@
 let student, teacher, classes = [];
 let url = "http://localhost:8080";
 
+const capitalize = function(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+};
+
 function readStudents() {
   fetch(url + '/student')
     .then((res) => res.json())
@@ -12,7 +16,7 @@ function readStudents() {
         output +=
           `
             <ul class="list-group mb-3" data-toggle="collapse" href="#collapse1">
-                <li class="list-group-item flex-start">${stud.firstname} ${stud.lastname}</li>
+                <li class="list-group-item flex-start">${capitalize(stud.firstname)} ${capitalize(stud.lastname)}</li>
               </ul>
             `
         console.log(stud.firstname)
