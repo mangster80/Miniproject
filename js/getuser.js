@@ -4,7 +4,7 @@ function getUsers() {
   fetch('../js/users.json')
     .then((res) => res.json())
     .then((data) => {
-      let output = '<h2 class="mb-4">Users</h2>';
+      let output = '';
       data.forEach(function(user) {
         output +=
           `

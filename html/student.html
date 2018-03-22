@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
   <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <title>Dancing Lion</title>
 </head>
 
-<body>
+<body onload="readStudents()">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <img src="../img/lion-1574448.svg" class="rounded float-left" alt="logo">
@@ -27,8 +27,6 @@
   </nav> <br>
   <main role="main" class="container">
     <h1>Pick Your Poison</h1>
-    <button class="btn btn-success mr-4" id="getUsers">Get JSON</button>
-    <div id="output"></div>
     <div class="card-group">
       <div class="card">
         <img class="card-img-top" src="../img/beachdance.jpeg" alt="beachdance">
@@ -85,11 +83,15 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <a data-toggle="collapse" href="#collapse1">Your Classes</a>
-            </h4>
+                <a data-toggle="collapse" href="#collapse2">Your Classes</a>
+              </h4>
           </div>
-          <div id="collapse1" class="panel-collapse collapse">
-            <div class="workshopList"></div>
+          <div id="collapse2" class="panel-collapse collapse">
+            <ul id="output" class="list-group">
+              <li class="list-group-item" >One</li>
+              <li class="list-group-item">Two</li>
+              <li class="list-group-item">Three</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -100,8 +102,9 @@
     <p>Copyright 2018 <a href="https://mangster80.github.io/Portfolio/">Magnus Wallin</a></p>
   </footer>
 
-  <script type="text/javascript" src="../js/getuser.js"></script>
+  <!-- <script type="text/javascript" src="../js/getuser.js"></script> -->
   <script type="text/javascript" src="../js/main.js"></script>
+  <script type="text/javascript" src="../js/teacher.js"></script>
   <script>
     $(function() {
       $("#datepicker").datepicker();

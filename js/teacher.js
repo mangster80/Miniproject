@@ -2,23 +2,23 @@
 let student, teacher, classes = [];
 let url = "http://localhost:8080";
 
+// output capital letters
 const capitalize = function(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
 
+// Fetch students and print out list
 function readStudents() {
   fetch(url + '/student')
     .then((res) => res.json())
     .then((data) => {
-      let output = '<h1>Street</h1>' + '<br>' + '<h4> Students </h4>'
+      let output = ''
       student = data
       student.forEach(function(stud) {
         output +=
           `
-            <ul class="list-group mb-3" data-toggle="collapse" href="#collapse1">
-                <li class="list-group-item flex-start">${capitalize(stud.firstname)} ${capitalize(stud.lastname)}</li>
-              </ul>
-            `
+            <li class="list-group-item">${capitalize(stud.firstname)} ${capitalize(stud.lastname)}</li>
+          `
         console.log(stud.firstname)
       })
       document.getElementById('output').innerHTML = output
@@ -38,6 +38,21 @@ function readStudents() {
       classes = data
       // do stuff here
     })
+}
 
-
+function readTeachers() {
+  fetch('../js/users.json')
+    .then((res) => res.json())
+    .then((data) => {
+      let output = ''
+      teacher = data
+      teacher.forEach(function(teach) {
+        output +=
+          `
+            <li class="list-group-item">${capitalize(teach.firstname)} ${capitalize(teach.lastname)}</li>
+          `
+        console.log(teach.firstname)
+      })
+      document.getElementById('output').innerHTML = output
+    })
 }
