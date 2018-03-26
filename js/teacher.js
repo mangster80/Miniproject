@@ -41,7 +41,7 @@ function readStudents() {
 }
 
 function readTeachers() {
-  fetch('../js/users.json')
+  fetch(url + '/teacher')
     .then((res) => res.json())
     .then((data) => {
       let output = ''
@@ -53,6 +53,6 @@ function readTeachers() {
           `
         console.log(teach.firstname)
       })
-      document.getElementById('output').innerHTML = output
+      document.getElementById('output1').innerHTML = output
     })
 }
